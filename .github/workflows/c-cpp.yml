@@ -26,7 +26,7 @@ jobs:
     #     file_pattern: "data/data.min.json"
     #     skip_dirty_check: false
     - name: build
-      run: mkdir build && cd ./build && cmake ../   && make -j$(nproc)
+      run: if [ -f data/userData.json ];then mkdir build && cd ./build && cmake .. && make -j$(nproc);fi
     - name: run
-      run: cd ./build && ./bcjh -s && ./bcjh -s 
+      run: if [ -f data/userData.json ];then cd ./build && ./bcjh -s && ./bcjh -s;fi 
 
