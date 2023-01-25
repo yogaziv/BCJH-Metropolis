@@ -22,7 +22,7 @@ jobs:
         commit_message: 自动拉取最新更新
         file_pattern: :^data/userData.json :^config.hpp
         branch: ${{ github.ref_name }}
-#         skip_dirty_check: true
+        skip_dirty_check: true
         skip_checkout: true
     - run: cat Readme.md | grep "不用"
       
