@@ -20,6 +20,7 @@ jobs:
       with: 
         commit_message: 自动拉取最新更新
         file_pattern: "^data/data.min.json"
+        branch: ${{ github.ref_name }}
         skip_dirty_check: false
       
     
