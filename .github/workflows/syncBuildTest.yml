@@ -20,7 +20,7 @@ jobs:
     - name: Checkout main
       uses: actions/checkout@v3
       with:
-        ref: main
+        ref: workflow-dev
 
   # REQUIRED step
     # Step 2: run the sync action
@@ -28,7 +28,7 @@ jobs:
       id: sync
       uses: aormsby/Fork-Sync-With-Upstream-action@v3.4
       with:
-        target_sync_branch: main
+        target_sync_branch: workflow-dev
         # REQUIRED 'target_repo_token' exactly like this!
         target_repo_token: ${{ secrets.GITHUB_TOKEN }}
         upstream_sync_branch: main
