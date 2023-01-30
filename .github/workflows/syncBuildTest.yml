@@ -16,10 +16,10 @@ jobs:
 
     steps:
     # Step 1: run a standard checkout action, provided by github
-    - name: Checkout main
+    - name: Checkout
       uses: actions/checkout@v3
       with:
-        ref: workflow-dev
+        ref: main
         # submodules: 'recursive'     ### may be needed in your situation
   # REQUIRED step
     # Step 2: run the sync action
@@ -30,7 +30,7 @@ jobs:
         target_sync_branch: workflow-dev
         # REQUIRED 'target_repo_token' exactly like this!
         target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-        upstream_sync_branch: main
+        upstream_sync_branch: workflow-source
         upstream_sync_repo: hjenryin/BCJH-Metropolis
 #         upstream_repo_access_token: ${{ secrets.UPSTREAM_REPO_SECRET }}
         upstream_pull_args: '--allow-unrelated-histories --no-rebase -s recursive -Xours'
