@@ -18,6 +18,8 @@ jobs:
     # Step 1: run a standard checkout action, provided by github
     - name: Checkout
       uses: actions/checkout@v3
+      with:
+        persist-credentials: false
 
   # REQUIRED step
     # Step 2: run the sync action
