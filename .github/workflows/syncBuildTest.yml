@@ -10,8 +10,7 @@ on:
 
 jobs:
   sync_with_upstream:
-    permissions:
-      contents: write
+    permissions: write-all
     runs-on: ubuntu-latest
     name: Sync main with upstream latest
 
