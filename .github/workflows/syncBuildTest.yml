@@ -19,7 +19,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v3
       with:
-        token: ${{ secrets.SYNC }}
+        token: ${{ secrets.SYNC_BCJH }}
 
   # REQUIRED step
     # Step 2: run the sync action
@@ -29,7 +29,7 @@ jobs:
       with:
         target_sync_branch: workflow-dev
         # REQUIRED 'target_repo_token' exactly like this!
-        target_repo_token: ${{ secrets.SYNC }}
+        target_repo_token: ${{ secrets.SYNC_BCJH }}
         upstream_sync_branch: workflow-source
         upstream_sync_repo: hjenryin/BCJH-Metropolis
 #         upstream_repo_access_token: ${{ secrets.UPSTREAM_REPO_SECRET }}
