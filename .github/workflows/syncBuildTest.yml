@@ -18,9 +18,7 @@ jobs:
     # Step 1: run a standard checkout action, provided by github
     - name: Checkout
       uses: actions/checkout@v3
-      with:
-        ref: main
-        # submodules: 'recursive'     ### may be needed in your situation
+
   # REQUIRED step
     # Step 2: run the sync action
     - name: Sync upstream changes
