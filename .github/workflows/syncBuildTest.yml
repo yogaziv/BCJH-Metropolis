@@ -31,7 +31,7 @@ jobs:
         target_sync_branch: workflow-dev
         # REQUIRED 'target_repo_token' exactly like this!
         target_repo_token: ${{ secrets.GITHUB_TOKEN }}
-        upstream_sync_branch: main
+        upstream_sync_branch: workflow-source
         upstream_sync_repo: hjenryin/BCJH-Metropolis
         upstream_pull_args: '--allow-unrelated-histories --no-rebase -s recursive -Xours'
     
